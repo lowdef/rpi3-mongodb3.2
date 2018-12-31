@@ -13,3 +13,7 @@ COPY ./docker-entrypoint.sh /
 RUN ["chmod", "+x", "/docker-entrypoint.sh"]
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
+
+# make sure that mongod performs a clean shutdown
+# when container is stopped
+STOPSIGNAL SIGINT

@@ -118,4 +118,8 @@ EXPOSE 27017
 EXPOSE 28017
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["mongod"] 
+CMD ["mongod"]
+
+# make sure that mongod performs a clean shutdown
+# when container is stopped
+STOPSIGNAL SIGINT
