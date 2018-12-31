@@ -1,0 +1,15 @@
+# Docker Image for MongoDB 3.2.21 on RPi3
+
+ARG mongod_version=3.2.21
+FROM rpi3-mongodb3.2
+
+ARG mongod_version
+
+LABEL created_by=lowdefinition
+LABEL inspired_on=https://github.com/andresvidal/rpi3-mongodb3
+LABEL mongod_version=${mongod_version}
+
+COPY ./docker-entrypoint.sh /
+RUN ["chmod", "+x", "/docker-entrypoint.sh"]
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
