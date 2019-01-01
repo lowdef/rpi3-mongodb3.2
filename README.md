@@ -105,7 +105,7 @@ $ docker run -d \
 lowdef/rpi3-mongodb3.2 \
 mongod --storageEngine mmapv1
 ```
-Now mongodb can be used using you preferred client, be it PyMongo or mongo directly.
+Now mongodb can be used using your preferred client, be it PyMongo or mongo directly.
 
 ### Using it
 Connect for example using PyMongo from the docker host:
