@@ -38,10 +38,15 @@ RUN apt update; \
     apt upgrade
     
 # install dependencies
-RUN apt install scons build-essential; \
-    apt install libboost-filesystem-dev libboost-program-options-dev libboost-system-dev libboost-thread-dev; \
-    apt install python-pymongo; \
-    apt install wget
+RUN apt install \
+	scons \
+	build-essential \
+	libboost-filesystem-dev \
+	libboost-program-options-dev \
+	libboost-system-dev \ 
+	libboost-thread-dev \ 
+	python-pymongo \
+	wget
 
 # print out some version information for debugging purposes
 #RUN cat docs/building.md; \
